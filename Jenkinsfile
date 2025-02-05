@@ -16,6 +16,7 @@ pipeline {
                     }
                 }
             }
+        }
         
         stage('Build package'){
             steps{
@@ -66,4 +67,4 @@ pipeline {
         }
     }
 }
-}
+
