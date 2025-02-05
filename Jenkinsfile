@@ -61,7 +61,7 @@ pipeline {
     }
     failure {
         script {
-            sh 'docker rm -f varshi || true' // Prevent failure if container doesn't exist
+            sh 'docker rm -f varshi || true' 
         }
         echo 'Deployment failed'
     }
