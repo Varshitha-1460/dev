@@ -55,16 +55,14 @@ pipeline {
             }
         }
     }
-    post {
-        success {
-            echo 'Deployment successful'
-        }
-        failure {
-            sh 'docker rm -f varshi'
-        }
-        always{
-            echo 'Deployed'
-        }
-    }
+   post {
+    success {
+        echo 'Build was successful!'
+    }
+    failure {
+        echo 'Build failed!'
+    }
+
+   }
 }
 
