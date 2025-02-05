@@ -1,2 +1,2 @@
 FROM tomcat:9-jre9
-COPY ./target/RCB.war /usr/local/tomcat/webapps/
+COPY ./target/dev.war /usr/local/tomcat/webapps/
