@@ -55,14 +55,20 @@ pipeline {
             }
         }
     }
-   post {
+  post {
     success {
-        echo 'Build was successful!'
+        echo 'Deployment successful'
     }
     failure {
-        echo 'Build failed!'
+        script {
+            sh 'docker rm -f varshi || true' // Prevent failure if container doesn't exist
+        }
+        echo 'Deployment failed'
     }
+    always {
+        echo 'Deployment process completed'
+    }
+}
 
-   }
 }
 
