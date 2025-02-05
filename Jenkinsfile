@@ -16,7 +16,7 @@ pipeline {
                     }
                 }
             }
-        }
+        
         stage('Build package'){
             steps{
                 sh 'mvn clean package'
@@ -65,5 +65,5 @@ pipeline {
             echo 'Deployed'
         }
     }
-
+}
 }
